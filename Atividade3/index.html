@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Paulo Guilherme Lopes da Silva">
+    <meta name="description" content="Conceitos, arquiteturas e aplicações de API">
+    <meta name="keywords" content="API">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="header-1">
+        <nav class="nav bd-grid">
+            <div>
+                <a href="#home" class="nav-logo">
+                    API (Interface de Programação de Aplicativos): Conceitos, Arquiteturas e Aplicações.
+                </a>
+            </div>
+
+            <div class="nav-menu" id="nav-menu">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="#concepts" class="nav-item">
+                            Introdução e conceitos da API</a></li>
+                    <li class="nav-item"><a href="#types" class="nav-link">
+                            Tipos de APIs</a></li>
+                    <li class="nav-item"><a href="#architectures" class="nav-link">
+                            Arquitetura REST</a></li>
+                    <li class="nav-item"><a href="#methods" class="nav-link">
+                            Métodos</a></li>
+                    <li class="nav-item"><a href="#references" class="nav-link">
+                            Referências</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="concepts section" id="concepts">
+            <h2 class="concepts-title">Introdução e conceitos da API</h2>
+
+            <div class="concepts-container bd-grid">
+
+                <div>
+
+                    <p class="concepts-text">
+                        Uma API é um conjunto de regras e protocolos que permite a comunicação entre diferentes
+                        aplicativos de software,
+                        viabilizando a reutilização de serviços sem precisar programar do zero. <b>Ela atua
+                            majoritariamente no back-end,
+                            servindo como uma ponte padronizada para o front-end</b>.
+                        Essa comunicação ocorre através de um fluxo de Solicitação e Resposta (Request-Response) entre
+                        Cliente e Servidor.
+                        <br><br>
+                        Na prática, o cliente (aplicação) escolhe opções em um menu,
+                        o garçom (API) leva o pedido até a cozinha (servidor) e entrega o prato (resultado) de volta ao
+                        cliente.
+                    </p>
+                </div>
+
+                <div class="home-img">
+                    
+                    <img src="https://thumbs.dreamstime.com/b/gar%C3%A7om-de-sorriso-novo-com-bandeja-vazia-34742321.jpg"
+                        width="350" height="300" alt="foto do Garçom" title="Garçom" />
+                    <br>
+                    <br>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="types section" id="types">
+            <h2 class="types-title">Tipos de APIs</h2>
+
+            <div class="types-container bd-grid">
+
+                <div>
+
+                    
+                    <ul>
+                        <li><b>APIs Abertas (Públicas):</b> Ficam disponíveis para que desenvolvedores externos acessem as
+                            funcionalidades livremente pela internet.</li>
+                        <li><b>APIs de Parceiros:</b> São restritas a parceiros comerciais estratégicos, exigindo credenciais
+                            de login para o acesso.</li>
+                        <li><b>APIs Internas (Privadas):</b> São mantidas ocultas do público e usadas exclusivamente dentro da
+                            própria organização para integrar sistemas internos.</li>
+                        <li><b>APIs Compostas:</b> Permitem acessar e combinar dados de múltiplos serviços em uma única
+                            chamada.</li>
+                    </ul>
+                  
+                </div>
+            </div>
+        </section>
+
+        <section class="architectures section" id="architectures">
+            <h2 class="architectures-title">Arquitetura REST</h2>
+
+            <div class="architectures-container bd-grid">
+
+                <div>
+
+                    
+                    <ol>
+                        <li><b>Client-Server:</b> Garante a separação entre quem solicita e quem provê o serviço.</li>
+                        <li><b>Stateless:</b> O servidor não guarda as informações (o estado) do cliente entre as requisições.</li>
+                        <li><b>Cache:</b> A comunicação com os endpoints ocorre de forma padronizada.</li>
+                        <li><b>Uniform Interface:</b> Permitem acessar e combinar dados de múltiplos serviços em uma única
+                            chamada.</li>
+                        <li><b>Layered System:</b> O sistema atua em camadas independentes.</li>
+                    </ol>
+                  
+                </div>
+            </div>
+        </section>
+
+        <section class="methods section" id="methods">
+            <h2 class="methods-title">Métodos e Códigos HTTP</h2>
+
+            <div class="methods-container bd-grid">
+
+                <div>
+
+                    
+                    <ul>
+                        <li><b>Verbos HTTP:</b> O GET solicita dados. O POST cria ou submete dados. O PUT edita ou substitui informações. O DELETE remove um recurso.</li>
+                        <li><b>Status de Resposta:</b> Os códigos 200 OK e 201 Created indicam sucesso na requisição. Os códigos 400 Bad Request e 404 Not Found indicam erros de sintaxe ou recurso não encontrado. O código 500 indica falha interna no servidor.</li>
+                    </ul>
+                   
+                </div>
+            </div>
+        </section>
+        
+        <section class="references section" id="references">
+            <h2 class="references-title">REFERÊNCIAS </h2>
+
+            <div class="references-container bd-grid">
+                
+                <ul class="references-list">
+                    <li class="references-item">
+                        BONIN, Douglas Vinicius Caldas. Implementação de uma API para visualização e 
+                        interação com objetos de aprendizagem para ferramenta de autoria FARMA. 2024. 
+                        Trabalho de Conclusão de Curso (Tecnologia em Sistemas para Internet) - Universidade 
+                        Tecnológica Federal do Paraná, Guarapuava, 2024. Disponível em: 
+                        <a href="https://repositoriocopia.utfpr.edu.br/jspui/handle/1/34010" target="_blank">Acessar repositório</a>. Acesso em: 15 ago. 2026.
+                    </li>
+                    <br>
+                    <li class="references-item">
+                        BORGES, Hudson S. et al. APIMiner 2.0: Recomendação de Exemplos de Uso de APIs 
+                        usando Regras de Associação. Departamento de Ciência da Computação, Universidade 
+                        Federal de Minas Gerais (UFMG) e Universidade Federal de Lavras (UFLA), [s.d.]. 
+                        Disponível em: 
+                        <a href="https://scholar.google.com.br/scholar?hl=pt-BR&as_sdt=0%2C5&q=APIMiner+2.0" target="_blank">Acessar artigo no Google Scholar</a>. Acesso em: 15 ago. 2026.
+                    </li>
+                    <br>
+                    <li class="references-item">
+                        GALINDO JUNIOR, Edemilton Alcides; ROCHA, Romeu Dias; MACIEL, Ronierison de 
+                        Souza. Desenvolvimento de API REST com Spring Boot. Revista Científica do UniRios, v. 
+                        2021.1, p. 499-525, 2021. Disponível em: 
+                        <a href="https://www.publicacoes.unirios.edu.br/index.php/revistarios/article/view/102" target="_blank">Acessar Revista Científica</a>. Acesso em: 15 ago. 2026.
+                    </li>
+                    <br>
+                    <li class="references-item">
+                        GONÇALVES, Vitor Tavares. Introdução à criação de APIs: conceitos fundamentais e 
+                        implementação em linguagem Python. 2025. Monografia (Engenharia de Controle e 
+                        Automação) - Escola de Minas, Universidade Federal de Ouro Preto, Ouro Preto, 2025. 
+                        Disponível em: <a href="https://monografias.ufop.br/handle/35400000/8436" target="_blank">Acessar Monografia</a>. Acesso em: 15 ago. 2026.
+                    </li>
+                    <br>
+                    <li class="references-item">
+                        GOODWIN, Michael. O que é uma API (interface de programação de aplicativos)?. IBM 
+                        Think, [s.d.]. Disponível em: <a href="https://www.ibm.com/br-pt/think/topics/api" target="_blank">Acessar artigo da IBM</a>. Acesso em: 15 ago. 2026.
+                    </li>
+                    <br>
+                    <li class="references-item">
+                        JASSE, Ermínio Pita. Application programming interface - API para integração de dados 
+                        em agricultura de precisão. 2017. 45 f. Dissertação (Mestrado em Tecnologias 
+                        Computacionais para o Agronegócio) - Universidade Tecnológica Federal do Paraná, 
+                        Medianeira, 2017.
+                    </li>
+                    <br>
+                    <li class="references-item">
+                        OLIVEIRA, Paulo Henrique Cardoso de. Desenvolvimento de um gerador de API REST 
+                        seguindo os principais padrões da arquitetura. 2014. 88 f. Trabalho de Curso (Bacharelado 
+                        em Sistemas de Informação) - Centro Universitário Eurípides de Marília, Fundação de Ensino 
+                        "Eurípides Soares da Rocha", Marília, 2014. Disponível em: 
+                        <a href="https://aberto.univem.edu.br/handle/11077/1008" target="_blank">Acessar repositório aberto</a>. Acesso em: 15 ago. 2026.
+                    </li>
+                    <br>
+                    <li class="references-item">
+                        WINCK, Arthur Pellenz. Desenvolvimento de uma API para integração e manipulação de 
+                        dados do portal Conecta: facilitação no acesso a dados governamentais. 2025. Trabalho 
+                        de Conclusão de Curso (Bacharelado em Ciências da Computação) - Universidade Federal de 
+                        Santa Catarina, Florianópolis, 2025. Disponível em: 
+                        <a href="https://repositorio.ufsc.br/handle/123456789/266481" target="_blank">Acessar repositório UFSC</a>. Acesso em: 15 ago. 2026. 
+                    </li>
+                </ul>
+
+            </div>
+        </section>
+
+    </main>
+</body>
+
+</html>
