@@ -1,0 +1,49 @@
+body {
+    padding: 10px;
+}
+
+.container-box{
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: auto;
+    grid-template-rows:200px 200px 200px;
+
+    grid-template-areas: 
+    'c c c d'
+    'a a b d'
+    'e e f f'
+    ;
+}
+
+.box {
+    background-color: rgb(246, 209, 24);
+    border-radius: 5px;
+}
+
+.a{
+    grid-area: a;
+}
+
+.b{
+    grid-area: b;
+
+}
+
+.c{
+    grid-area: c;
+
+}
+
+.d{
+    grid-area: d;
+
+}
+
+.e{
+    grid-area: e;
+}
+
+.f{
+    grid-area: f;
+
+}
