@@ -8,6 +8,7 @@ h2 {
 
 #color {
 	width: 500px;
+	height: 500px;
 	float: left;
     background-color: #ffffff;
 }
@@ -23,7 +24,7 @@ h2 {
 
 @media screen and (min-width: 420px) {
 	#color {
-        background-color:#b68e00
+        background-color:#f1b910
 	}
     .cor:before{
         content: "laranja";
