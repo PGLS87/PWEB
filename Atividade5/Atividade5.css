@@ -1,0 +1,76 @@
+body {
+	font: 150% Arial, Helvetica, sans-serif;
+}
+
+h2 {
+	font: bold 100% Arial, Helvetica, sans-serif;
+}
+
+#color {
+	width: 500px;
+	float: left;
+    background-color: #ffffff;
+}
+
+@media screen and (min-width: 0px) {
+	#color {
+        background-color:#434343
+	}
+    .cor::before{
+        content: "cinza";
+    }
+}
+
+@media screen and (min-width: 420px) {
+	#color {
+        background-color:#b68e00
+	}
+    .cor:before{
+        content: "laranja";
+    }
+}
+
+@media screen and (min-width: 768px) {
+	#color {
+        background-color:#ff00ff
+	}
+    .cor:before{
+        content: "rosa";
+    }
+}
+
+@media screen and (min-width: 1024px) {
+	#color {
+        background-color:#ff0000
+	}
+    .cor:before{
+        content: "vermelho";
+    }
+}
+
+@media screen and (min-width: 1080px) {
+	#color {
+        background-color:#56007af2
+	}
+    .cor:before{
+        content: "roxo";
+    }
+}
+
+@media screen and (min-width: 1366px) {
+	#color {
+        background-color:#d9ff00
+	}
+    .cor:before{
+        content: "amarelo";
+    }
+}
+
+@media screen and (min-width: 1920px) {
+	#color {
+        background-color:#00a424
+	}
+    .cor:before{
+        content: "verde";
+    }
+}
