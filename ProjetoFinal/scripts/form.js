@@ -276,7 +276,7 @@ formulario.addEventListener("submit", (e) => {
       ? "Médico atualizado com sucesso!"
       : "Médico cadastrado com sucesso!",
   );
-  window.location.href = "diretorio.html";
+  window.location.href = "index.html";
 });
 
 // remove todas as mensagem de erros
