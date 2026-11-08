@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Médico - SICA</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="estrutura">
+        <aside class="barra-lateral">
+            <a class="logo" href="diretorio.html">
+                <span class="icone">+</span>
+                <span>SICA</span>
+            </a>
+
+            <nav class="menu" aria-label="Menu principal">
+                <a class="menu-item active" href="diretorio.html">Médicos</a>
+            </nav>
+
+            <div class="rodape">
+                <span class="menu-item">Sair</span>
+            </div>
+        </aside>
+
+        <div class="conteudo">
+            <header class="cabecalho">
+                <div class="usuario">
+                    <img src="https://img.magnific.com/vetores-premium/icone-de-usuario-em-icone-cinza-redondo_1076610-44912.jpg?semt=ais_hybrid&amp;w=740&amp;q=80" alt="Ícone de usuário">
+                    <span>Usuário</span>
+                </div>
+            </header>
+
+            <main class="main">
+                <div class="titulo-pagina">
+                    <div>
+                        <h1>Cadastro de médico</h1>
+                        <p class="subtitulo">Dados do profissional e disponibilidade de atendimento</p>
+                    </div>
+                </div>
+
+                <form class="form-medico" id="form-medico" novalidate>
+                    <div class="coluna-form">
+                        <section class="section section-form">
+                            <h2>Informações do médico</h2>
+
+                            <!-- nome -->
+                            <div class="campo">
+                                <label for="nome">Nome completo <span class="obrigatorio">*</span></label>
+                                <input type="text" id="nome" name="nome" placeholder="Ex.: Dr. Rodolfo Neves" required>
+                            </div>
+
+                            <!-- sobre -->
+                            <div class="campo">
+                                <label for="sobre">Sobre</label>
+                                <textarea id="sobre" name="sobre" rows="3" placeholder="Breve descrição do médico"></textarea>
+                            </div>
+
+                            <!-- crm e especialidade -->
+                            <div class="coluna">
+                                <div class="campo">
+                                    <label for="crm">CRM / UF <span class="obrigatorio">*</span></label>
+                                    <input type="text" id="crm" name="crm" placeholder="Ex.: 12345-SP" required>
+                                </div>
+                                <div class="campo">
+                                    <label for="especialidade">Especialidade<span class="obrigatorio">*</span></label>
+                                    <input type="text" id="especialidade" name="especialidade" placeholder="Ex.: Cardiologista" required>
+                                </div>
+                            </div>
+
+                            <!-- valor -->
+                            <div class="campo">
+                                <label for="valor">Valor da consulta (R$)<span class="obrigatorio">*</span></label>
+                                <input type="number" id="valor" name="valorConsulta" min="0" step="0.01" placeholder="Ex.: 350,00" required>
+                            </div>
+                        </section>
+
+                        <section class="section section-form">
+                            <h2>Informações de contato</h2>
+                            <div class="coluna">
+                                <div class="campo">
+                                    <label for="email">E-mail corporativo <span class="obrigatorio">*</span></label>
+                                    <input type="email" id="email" name="email" placeholder="medico@exemplo.com" required>
+                                </div>
+                                <div class="campo">
+                                    <label for="telefone">Telefone <span class="obrigatorio">*</span></label>
+                                    <input type="tel" id="telefone" name="telefone" placeholder="(15) 99999-9999" oninput="formatarTelefone(this)" required>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+
+                    <div class="coluna-form">
+
+                        <!-- foto -->
+                        <section class="section section-form section-foto">
+                            <img class="foto-perfil" src="https://img.magnific.com/vetores-premium/icone-de-usuario-em-icone-cinza-redondo_1076610-44912.jpg?semt=ais_hybrid&amp;w=740&amp;q=80" alt="Foto de perfil padrão do médico">
+                            <div class="campo">
+                                <label for="foto">URL da foto do médico</label>
+                                <input type="url" id="foto" name="fotoUrl" placeholder="https://exemplo.com/foto.jpg">
+                            </div>
+                        </section>
+
+                        <!-- disponibilidade -->
+                        <section class="section section-form">
+                            <h2>Disponibilidade de atendimento</h2>
+
+                            <fieldset class="campo campo-dias">
+                                <legend>Dias de atendimento</legend>
+                                <div id="dias-semana" class="dias-semana">
+                                    <label class="dia"><input type="checkbox" name="dias" value="segunda"><span>Seg</span></label>
+                                    <label class="dia"><input type="checkbox" name="dias" value="terca"><span>Ter</span></label>
+                                    <label class="dia"><input type="checkbox" name="dias" value="quarta"><span>Qua</span></label>
+                                    <label class="dia"><input type="checkbox" name="dias" value="quinta"><span>Qui</span></label>
+                                    <label class="dia"><input type="checkbox" name="dias" value="sexta"><span>Sex</span></label>
+                                    <label class="dia"><input type="checkbox" name="dias" value="sabado"><span>Sáb</span></label>
+                                    <label class="dia"><input type="checkbox" name="dias" value="domingo"><span>Dom</span></label>
+                                </div>
+                            </fieldset>
+
+                            <fieldset class="periodo">
+                                <legend>Manhã</legend>
+                                <div class="coluna">
+                                    <div class="campo">
+                                        <label for="manha-inicio">Início</label>
+                                        <input type="time" id="manha-inicio" name="manhaInicio" min="00:00" max="12:00">
+                                    </div>
+                                    <div class="campo">
+                                        <label for="manha-fim">Término</label>
+                                        <input type="time" id="manha-fim" name="manhaFim" min="00:00" max="12:00">
+                                    </div>
+                                </div>
+                            </fieldset>
+
+                            <fieldset class="periodo">
+                                <legend>Tarde</legend>
+                                <div class="coluna">
+                                    <div class="campo">
+                                        <label for="tarde-inicio">Início</label>
+                                        <input type="time" id="tarde-inicio" name="tardeInicio" min="12:00" max="23:59">
+                                    </div>
+                                    <div class="campo">
+                                        <label for="tarde-fim">Término</label>
+                                        <input type="time" id="tarde-fim" name="tardeFim" min="12:00" max="23:59">
+                                    </div>
+                                </div>
+                            </fieldset>
+
+                            <div class="campo">
+                                <label for="intervalo">Intervalo entre consultas (minutos)</label>
+                                <input type="number" id="intervalo" name="intervaloMinutos" min="5" step="5" placeholder="Ex.: 30">
+                            </div>
+                        </section>
+                    </div>
+
+                    <div class="acoes-form">
+                        <button class="button btn-azul" type="submit" >Salvar médico</button>
+                        <a class="button btn-cinza" href="diretorio.html">Cancelar</a>
+                    </div>
+                </form>
+            </main>
+        </div>
+    </div>
+
+    <script src="./scripts/form.js"></script>
+</body>
+</html>

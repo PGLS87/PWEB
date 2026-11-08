@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diretório Médico - SICA</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="estrutura">
+        <aside class="barra-lateral">
+            <a class="logo" href="diretorio.html">
+                <span class="icone">+</span>
+                <span>SICA</span>
+            </a>
+
+            <nav class="menu" aria-label="Menu principal">
+                <a class="menu-item active" href="diretorio.html">Médicos</a>
+            </nav>
+
+            <div class="rodape">
+                <span class="menu-item">Sair</span>
+            </div>
+        </aside>
+
+        <div class="conteudo">
+            <header class="cabecalho">
+                <div class="usuario">
+                    <img src="https://img.magnific.com/vetores-premium/icone-de-usuario-em-icone-cinza-redondo_1076610-44912.jpg?semt=ais_hybrid&w=740&q=80" alt="Ícone de usuário">
+                    <span>Usuário</span>
+                </div>
+            </header>
+
+            <main class="main">
+                <section class="section titulo-diretorio">
+                    <div>
+                        <h1>Diretório Médico</h1>
+                        <p class="subtitulo">0 médicos cadastrados</p>
+                    </div>
+                    <a class="button btn-azul" href="criar_editar.html?modo=novo">+ Adicionar médico</a>
+                </section>
+
+                <section class="section lista-medicos" aria-label="Lista de médicos">
+                    <div class="barra-pesquisa">
+                        <label for="pesquisa">Pesquisar médico</label>
+                        <input type="search" id="pesquisa" name="pesquisa" placeholder="Digite o nome ou CRM">
+                    </div>
+
+                    <div class="tabela-medicos">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th scope="col">Médico</th>
+                                    <th scope="col">Especialidade / CRM</th>
+                                    <th scope="col">Ações</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tabela-medicos-corpo">
+                                <!-- Linhas renderizadas via scripts/diretorio.js -->
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
+
+    <script src="./scripts/diretorio.js"></script>
+</body>
+</html>
